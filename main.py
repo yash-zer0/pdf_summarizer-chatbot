@@ -1,14 +1,23 @@
 import streamlit as st
 from transformers import pipeline
 import fitz  # PyMuPDF
+from huggingface_hub import login
+
+# Use your token here
+login(token="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")
+
 
 # Initialize Hugging Face models
 summary_pipeline = pipeline("summarization", model="facebook/bart-large-cnn")
 chat_pipeline = pipeline("text-generation", model="mistralai/Mistral-7B-Instruct-v0.3")
 
 # Set up the Hugging Face token
-from huggingface_hub import login
-login(token="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")
+
+
+
+
+
+
 
 # Function to extract text from PDF
 def extract_text_from_pdf(file):
