@@ -2,3 +2,5 @@ streamlit
 transformers
 PyMuPDF
 huggingface_hub
+torch
+tensorflow
